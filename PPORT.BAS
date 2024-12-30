@@ -1,0 +1,5 @@
+1 CLS
+INPUT i
+OUT &H378, i
+GOTO 1
+

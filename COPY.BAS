@@ -1,0 +1,24 @@
+CLS : SCREEN 12
+INPUT cpy$
+CLS
+
+LINE (100, 100)-(200, 200), 4
+
+OPEN cpy$ FOR OUTPUT AS #1
+PRINT #1, "cls:screen 12"
+
+FOR x000 = 0 TO 640
+FOR y000 = 0 TO 480
+a = POINT(x000, y000)
+IF a > 0 THEN GOSUB 1010
+NEXT y000
+NEXT x000
+
+CLOSE
+
+END
+
+1010 PRINT #1, "pset("; x000; ","; y000; "),"; a: RETURN
+
+
+
