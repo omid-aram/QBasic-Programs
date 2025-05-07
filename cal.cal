@@ -1,0 +1,24 @@
+ON ERROR GOTO ert
+PI = 4 * ATN(1)
+function FAC(n)
+n0 = 1
+FOR v = 1 TO n
+n0 = n0 * v
+NEXT v
+FAC = n0
+end function
+function ASN(x)
+PI=4*atn(1): cx = SQR(1 - (x) ^ 2)
+IF cx = 0 THEN ASN=90: goto 30
+tx = x / cx: ASN = ATN(tx) * (180 / PI)
+30 end function
+function ACS(x)
+if x=0 then ACS=90:goto 40
+ PI = 4 * ATN(1):sx = SQR(1 - (x) ^ 2):tx = sx / x:ACS = ATN(tx) * (180 / PI)
+40 end function
+print:print "ANSWER = "
+answer# =3+4
+locate csrlin-1,10:print answer#
+10 ak$=input$(1)
+run "calculat.bas"
+ert: locate csrlin-1,10:PRINT "î": GOTO 10

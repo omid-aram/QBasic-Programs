@@ -1,47 +1,47 @@
 DECLARE SUB help ()
-CLS
-PRINT "PRESS [Esc] TO EXIT": y$ = INPUT$(1): IF y$ = CHR$(27) THEN CLS : END
-CLS : CALL help
+Cls
+Print "PRESS any key to load the Calculator or [Esc] TO EXIT": y$ = Input$(1): If y$ = Chr$(27) Then Cls: End
+Cls: Call help
 'END
-LINE INPUT "YOUR ACCOUNT ? "; a$
-OPEN "cal.cal" FOR OUTPUT AS #1
-PRINT #1, "ON ERROR GOTO ert"
-PRINT #1, "PI = 4 * ATN(1)"
-PRINT #1, "function FAC(n)"
-PRINT #1, "n0 = 1"
-PRINT #1, "FOR v = 1 TO n"
-PRINT #1, "n0 = n0 * v"
-PRINT #1, "NEXT v"
-PRINT #1, "FAC = n0"
-PRINT #1, "end function"
-PRINT #1, "function ASN(x)"
-PRINT #1, "PI=4*atn(1): cx = SQR(1 - (x) ^ 2)"
-PRINT #1, "IF cx = 0 THEN ASN=90: goto 30"
-PRINT #1, "tx = x / cx: ASN = ATN(tx) * (180 / PI)"
-PRINT #1, "30 end function"
-PRINT #1, "function ACS(x)"
-PRINT #1, "if x=0 then ACS=90:goto 40"
-PRINT #1, " PI = 4 * ATN(1):sx = SQR(1 - (x) ^ 2):tx = sx / x:ACS = ATN(tx) * (180 / PI)"
-PRINT #1, "40 end function"
-PRINT #1, "print:print " + CHR$(34) + "ANSWER = " + CHR$(34)
-PRINT #1, "answer# ="; a$
-PRINT #1, "locate csrlin-1,10:print answer#"
-PRINT #1, "10 ak$=input$(1)"
-PRINT #1, "run " + CHR$(34) + "calculat.bas" + CHR$(34)
-PRINT #1, "ert: locate csrlin-1,10:PRINT " + CHR$(34) + "î" + CHR$(34) + ": GOTO 10"
-CLOSE #1
-RUN "cal.cal"
+Line Input "YOUR ACCOUNT ? "; a$
+Open "cal.cal" For Output As #1
+Print #1, "ON ERROR GOTO ert"
+Print #1, "PI = 4 * ATN(1)"
+Print #1, "function FAC(n)"
+Print #1, "n0 = 1"
+Print #1, "FOR v = 1 TO n"
+Print #1, "n0 = n0 * v"
+Print #1, "NEXT v"
+Print #1, "FAC = n0"
+Print #1, "end function"
+Print #1, "function ASN(x)"
+Print #1, "PI=4*atn(1): cx = SQR(1 - (x) ^ 2)"
+Print #1, "IF cx = 0 THEN ASN=90: goto 30"
+Print #1, "tx = x / cx: ASN = ATN(tx) * (180 / PI)"
+Print #1, "30 end function"
+Print #1, "function ACS(x)"
+Print #1, "if x=0 then ACS=90:goto 40"
+Print #1, " PI = 4 * ATN(1):sx = SQR(1 - (x) ^ 2):tx = sx / x:ACS = ATN(tx) * (180 / PI)"
+Print #1, "40 end function"
+Print #1, "print:print " + Chr$(34) + "ANSWER = " + Chr$(34)
+Print #1, "answer# ="; a$
+Print #1, "locate csrlin-1,10:print answer#"
+Print #1, "10 ak$=input$(1)"
+Print #1, "run " + Chr$(34) + "calculat.bas" + Chr$(34)
+Print #1, "ert: locate csrlin-1,10:PRINT " + Chr$(34) + "î" + Chr$(34) + ": GOTO 10"
+Close #1
+Run "cal.cal"
 
-SUB help
-PRINT CHR$(34) + "+" + CHR$(34); " = +        " + CHR$(34) + "-" + CHR$(34); " = -        " + CHR$(34) + "*" + CHR$(34); " = x        " + CHR$(34) + "/" + CHR$(34); " = ö        " + CHR$(34) + "Enter" + CHR$(34); " ¯ =        "
-PRINT "-------------------------------------------------------------------------------"
-PRINT CHR$(34) + "SQR(x)" + CHR$(34); " = ûx       " + CHR$(34) + "x^n" + CHR$(34); " = xü        " + CHR$(34) + "FAC(n)" + CHR$(34); " =  n!        " + CHR$(34) + "PI" + CHR$(34); " = ã           "
-PRINT "-------------------------------------------------------------------------------"
-PRINT CHR$(34) + "SIN(x)" + CHR$(34); " = Sin(x)         " + CHR$(34) + "COS(x)" + CHR$(34); " = Cos(x)         " + CHR$(34) + "TAN(x)" + CHR$(34); " = Tan(x)         "
-PRINT "-------------------------------------------------------------------------------"
-PRINT CHR$(34) + "ASN(x)" + CHR$(34); " = Arcsin(x)      " + CHR$(34) + "ACS(x)" + CHR$(34); " = Arccos(x)      " + CHR$(34) + "ATN(x)" + CHR$(34); " = Arctan(x)      "
-PRINT "-------------------------------------------------------------------------------"
-PRINT CHR$(34) + "ABS(x)" + CHR$(34); " = ³x³            " + CHR$(34) + "INT(x)" + CHR$(34); " = [x]            " + CHR$(34) + "SGN(x)" + CHR$(34); " = Sign(x)        "
-PRINT "-------------------------------------------------------------------------------"
-END SUB
+Sub help
+    Print Chr$(34) + "+" + Chr$(34); " = +        " + Chr$(34) + "-" + Chr$(34); " = -        " + Chr$(34) + "*" + Chr$(34); " = x        " + Chr$(34) + "/" + Chr$(34); " = ö        " + Chr$(34) + "Enter" + Chr$(34); " ¯ =        "
+    Print "-------------------------------------------------------------------------------"
+    Print Chr$(34) + "SQR(x)" + Chr$(34); " = ûx       " + Chr$(34) + "x^n" + Chr$(34); " = xü        " + Chr$(34) + "FAC(n)" + Chr$(34); " =  n!        " + Chr$(34) + "PI" + Chr$(34); " = ã           "
+    Print "-------------------------------------------------------------------------------"
+    Print Chr$(34) + "SIN(x)" + Chr$(34); " = Sin(x)         " + Chr$(34) + "COS(x)" + Chr$(34); " = Cos(x)         " + Chr$(34) + "TAN(x)" + Chr$(34); " = Tan(x)         "
+    Print "-------------------------------------------------------------------------------"
+    Print Chr$(34) + "ASN(x)" + Chr$(34); " = Arcsin(x)      " + Chr$(34) + "ACS(x)" + Chr$(34); " = Arccos(x)      " + Chr$(34) + "ATN(x)" + Chr$(34); " = Arctan(x)      "
+    Print "-------------------------------------------------------------------------------"
+    Print Chr$(34) + "ABS(x)" + Chr$(34); " = ³x³            " + Chr$(34) + "INT(x)" + Chr$(34); " = [x]            " + Chr$(34) + "SGN(x)" + Chr$(34); " = Sign(x)        "
+    Print "-------------------------------------------------------------------------------"
+End Sub
 
