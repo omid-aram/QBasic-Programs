@@ -159,7 +159,7 @@ Next x
 min = 0: Call mint(min)
 s = 1: Timer Off
 If nn = 10 Or nn = 15 Or nn = 20 Then
-    Open "c:\dosmine0.db" For Random As #1 Len = 17
+    Open "dosmine0.db" For Random As #1 Len = 17
     Field #1, 15 As nam$, 2 As t$
     Get #1, nn
     If tim < CVI(t$) Then
@@ -298,7 +298,7 @@ Sub best (besv(), gsave(), q)
     Line (176, 110 + y200%)-(289, 111 + y200%), 7, B
     Close
     Call font("Fastest Mine Sweepers", 0, 0, 179, 114 + y200%)
-    Open "c:\dosmine0.db" For Random As #1 Len = 17
+    Open "dosmine0.db" For Random As #1 Len = 17
     Field #1, 15 As nam$, 2 As t$
     Get #1, 10
     Call font("Beginner:                 " + Str$(CVI(t$)) + " seconds            " + nam$, 0, 0, 180, 137 + y200%)
@@ -314,7 +314,7 @@ Sub best (besv(), gsave(), q)
     Exit Sub
 
     us:
-    Open "c:\dosmine0.db" For Random As #1 Len = 17
+    Open "dosmine0.db" For Random As #1 Len = 17
     Field #1, 15 As nam$, 2 As t$
     LSet nam$ = "Anonymous"
     LSet t$ = MKI$(999)

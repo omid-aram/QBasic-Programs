@@ -50,10 +50,11 @@ scale$ = "CDEFGAB": Play "L16": Return
 58 If m2 = 2 Then Return
 For i% = 0 To 6: GoSub 57: Next i%: Return
 57 If m2 = 2 Then Return
-Play "O" + Str$(i%): Play "X" + VarPtr$(scale$): Return
+Play "O" + Str$(i%): 'Play "X" + VarPtr$(scale$) ': Return
+Play "CDEFGAB": Return
 38 If m2 = 2 Then Return
 Music$ = "MBT180o2P2P8L8GGGL2E-P24P8L8FFFL2D": Play Music$: While Play(0) > 5: Wend: Return
-h: Cls: Print "Enter oMiD while the game will be start": Print "After prees p then enter Gg": ak$ = Input$(1): GoSub 21
+h: Cls: Print "You pressed Hh to see this cheatsheet!": Print "Enter oMiD while the game will be start": Print "After prees p then enter Gg": ak$ = Input$(1): GoSub 21
 108 Open "DRIVER_score.txt" For Output As #1: If y > y1 Then Print #1, y Else Print #1, y1
 If y > y1 Then Open "DRIVER_names.txt" For Output As #2: Locate 15, 1: Line Input "Your Name ?"; n$: Print #2, n$
 Return

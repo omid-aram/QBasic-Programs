@@ -1224,12 +1224,12 @@ End Sub
 
 Sub mousehide
     ax% = 2
-    mousedriver ax%, 0, 0, 0
+    mousedriver ax, 0, 0, 0
 End Sub
 
 Function MouseInit%
     ax% = 0
-    mousedriver ax%, 0, 0, 0
+    mousedriver ax, 0, 0, 0
     MouseInit% = ax%
 End Function
 
@@ -1237,28 +1237,28 @@ Sub mouseput (x%, y%)
     ax% = 4
     cx% = x%
     dx% = y%
-    mousedriver ax%, 0, cx%, dx%
+    mousedriver ax, 0, cx, dx
 End Sub
 
 Sub MouseRange (X1%, y1%, x2%, Y2%)
     ax% = 7
     cx% = X1%
     dx% = x2%
-    mousedriver ax%, 0, cx%, dx%
+    mousedriver ax, 0, cx, dx
     ax% = 8
     cx% = y1%
     dx% = Y2%
-    mousedriver ax%, 0, cx%, dx%
+    mousedriver ax, 0, cx, dx
 End Sub
 
 Sub mouseshow
     ax% = 1
-    mousedriver ax%, 0, 0, 0
+    mousedriver ax, 0, 0, 0
 End Sub
 
 Sub mousestatus (lb%, rb%, xmouse%, ymouse%)
     ax% = 3
-    mousedriver ax%, bx%, cx%, dx%
+    mousedriver ax, bx, cx, dx
     lb% = ((bx% And 1) <> 0)
     rb% = ((bx% And 2) <> 0)
     xmouse% = cx%
