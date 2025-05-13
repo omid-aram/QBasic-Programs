@@ -16,22 +16,22 @@ While s2 < (b + a) ^ 2 - 5
     For x = a To b
         s1 = s1 + 1
         s2 = s2 + 1
-        nogh(s1) = Point(x, d): PSet (x, d), 0
+        nogh(s1) = Point(x, d) ': PSet (x, d), 0
     Next x
     For y = a To b
         s1 = s1 + 1
         s2 = s2 + 1
-        nogh(s1) = Point(b, y): PSet (b, y), 0
+        nogh(s1) = Point(b, y) ': PSet (b, y), 0
     Next y
     For x0 = c To d Step -1
         s1 = s1 + 1
         s2 = s2 + 1
-        nogh(s1) = Point(x0, b): PSet (x0, b), 0
+        nogh(s1) = Point(x0, b) ': PSet (x0, b), 0
     Next x0
     For y0 = c To d Step -1
         s1 = s1 + 1
         s2 = s2 + 1
-        nogh(s1) = Point(d, y0): PSet (d, y0), 0
+        nogh(s1) = Point(d, y0) ': PSet (d, y0), 0
     Next y0
 
     p0 = 4 * (b - d)
@@ -55,7 +55,7 @@ While s2 < (b + a) ^ 2 - 5
     c = c - 1
     b = b - 1
 Wend
-e = Point(b0 / 2, b0 / 2): PSet (b0 / 2, b0 / 2), 0
+e = Point(b0 / 2, b0 / 2)': PSet (b0 / 2, b0 / 2), 0
 PSet (320, 240), e
 
 
